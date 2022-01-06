@@ -4,7 +4,7 @@ import logging
 import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 config = ConfigParser()
-config.read(f'{dir_path}/basic_flask_app.cfg')
+config.read(f'{dir_path}/dummy.cfg')
 logging.basicConfig(filename=config['LOGGING']['log_file'], level=config['LOGGING']['log_level'])
 app = Flask(__name__)
 @app.route('/dummy', methods=['GET'])
